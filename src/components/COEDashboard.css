@@ -1,0 +1,603 @@
+/* Dashboard styling */
+.dashboard {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logout-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tile-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.tile {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Modal styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1000px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.student-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.student-list li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background-color: #f9f9f9;
+}
+
+.student-list li strong {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Scrollable Table Styling */
+.student-modal {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-bar {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.student-table-container {
+    max-height: 300px; /* Set a fixed height for scrollable container */
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.student-table th, .student-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.student-table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.student-table tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Scrollable Table Styling for Teachers */
+.teacher-modal {
+    display: flex;
+    flex-direction: column;
+}
+
+.teacher-table-container {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.teacher-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.teacher-table th, .teacher-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.teacher-table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.teacher-table tr:hover {
+    background-color: #f0f0f0;
+}
+
+.exam-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.exam-form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.exam-form input,
+.exam-form textarea {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.exam-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.exam-form button:hover {
+    background-color: #0056b3;
+}
+
+.instruction-textbox {
+    height: 200px; /* Fixed height */
+    overflow-y: auto; /* Vertical scroll if content exceeds height */
+    resize: none; /* Prevent resizing */
+    padding: 10px; /* Add padding for better appearance */
+    border: 1px solid #ccc; /* Optional: border styling */
+    background-color: #f9f9f9; /* Optional: background color */
+    font-family: inherit; /* Ensure it matches the surrounding font */
+    font-size: 14px; /* Adjust font size as needed */
+    pointer-events: auto; /* Ensure it's interactive for input */
+}
+
+.exam-summary-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0px 0px 0px 0px;
+}
+
+.exam-summary-card {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Optional: Center vertically if needed */
+    margin-bottom: 0px; /* Space between title and other details */
+}
+
+.exam-summary-card:hover {
+    transform: translateY(-10px);
+}
+
+.exam-summary-card h3 {
+    margin-top: 0;
+}
+
+.exam-summary-card p {
+    margin: 5px 0;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.table-container {
+  max-height: 400px; /* Adjust as per modal height */
+  overflow-y: auto; /* Add vertical scroll if content exceeds height */
+  overflow-x: auto; /* Add horizontal scroll if table is too wide */
+}
+
+.table {
+  width: 100%; /* Ensure the table takes up the available width */
+  border-collapse: collapse; /* Neat borders without double lines */
+  margin-top: 10px;
+  font-family: 'Arial', sans-serif; /* Clean, modern font */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+  word-wrap: break-word; /* Prevent overflowing content in cells */
+}
+
+th {
+  background-color: #f5f5f5; /* Optional: Highlight header row */
+  position: sticky; /* Keep headers visible during vertical scroll */
+  top: 0;
+  text-align: center;
+}
+
+.btn {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  margin: 10px 10px 0px 0px;
+  display: flex;
+  align-items: center; /* Align icon and text */
+  gap: 8px; /* Space between icon and text */
+  font-size: 14px;
+  transition: all 0.3s ease; /* Smooth hover effects */
+}
+
+.btn:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #a71d2a; /* Darker red on hover */
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.7; /* Make it look disabled */
+  margin: 0px 0px 0px 0px;
+}
+
+.btn-success:hover {
+  background-color: #28a745; /* No change on hover */
+}
+
+.view-papers-button {
+    background: linear-gradient(135deg, #6e7fdd, #4e63d4); /* Gradient background */
+    color: white; /* Text color */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    padding: 12px 24px; /* Padding around the text */
+    border: none; /* No border */
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    margin-top: 20px;
+}
+
+.view-papers-button:hover {
+    background: linear-gradient(135deg, #4e63d4, #6e7fdd); /* Reversed gradient on hover */
+    transform: scale(1.05); /* Slightly increase button size */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.view-papers-button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.5); /* Blue focus outline */
+}
+.view-papers-btn-container {
+    display: flex;             /* Enable Flexbox */
+    justify-content: center;   /* Horizontally center the button */
+    align-items: center;       /* Vertically center the button */
+    height: 100%;              /* Ensure the container takes up full height */
+}
+
+.view-papers-button:active {
+    transform: scale(0.98); /* Slightly shrink on click */
+}
+
+/* General styling for the React Fragment section */
+.configure-paper-container {
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: none;  /* Remove any box shadow from this section */
+}
+
+/* Heading for Configure Paper */
+.configure-paper-container h2 {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+/* Label for the input fields */
+.configure-paper-container label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Input Fields */
+.configure-paper-container input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* Focus state for the inputs */
+.configure-paper-container input[type="number"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+/* Finalize Button */
+.configure-paper-container button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Hover and active states for the button */
+.configure-paper-container button:hover {
+    background-color: #45a049;
+}
+
+.configure-paper-container button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Table styling for papers set */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    table-layout: fixed;
+}
+
+/* Styling for table columns to prevent overflow */
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+/* Styling for the papers set section */
+.papers-set-section {
+    margin-bottom: 20px;
+}
+
+/* Styling for each paper's section */
+.paper-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the configure paper section under each paper */
+.configure-paper-container div {
+    margin-bottom: 16px;
+}
+
+/* Responsiveness for mobile devices */
+@media (max-width: 600px) {
+    .configure-paper-container input[type="number"] {
+        padding: 10px;
+    }
+
+    .configure-paper-container button {
+        padding: 12px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+/* Modal Container */
+.results-table-container {
+    background: #ffffff;
+    padding: 0px;
+    max-width: 90%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+/* Title */
+.results-title {
+    font-size: 2rem;
+    color: #34495e;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Table Styling */
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.results-table thead {
+    background: linear-gradient(145deg, #f2f2f2, #e0e0e0);
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.results-table th, .results-table td {
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.results-table td {
+    font-size: 1rem;
+    color: #34495e;
+}
+
+/* Row Hover Effect */
+.results-table tr:hover {
+    background-color: #ecf0f1;
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Table Cell Styling */
+.rank {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #3498db;
+}
+
+.student-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.student-id {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+}
+
+.score {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #f39c12;
+}
+
+/* No Results Text */
+.no-results {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #bdc3c7;
+    text-align: center;
+}
+
+/* Loading Container */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.loading-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f39c12;
+}
+

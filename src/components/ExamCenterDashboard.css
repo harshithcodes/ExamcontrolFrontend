@@ -1,0 +1,116 @@
+.exam-center-dashboard {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+}
+
+.error {
+    color: #ff4d4d;
+    background-color: #ffe6e6;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.exam-center-details-container {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.center-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.center-code,
+.center-address {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.assigned-exams-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.exams-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.exam-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.exam-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.exam-info {
+    flex: 1;
+}
+
+.exam-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.exam-date {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.host-exam-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.host-exam-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.error {
+    color: #ff4d4d;
+    background-color: #ffe6e6;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: bold;
+}

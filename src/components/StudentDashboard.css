@@ -1,0 +1,254 @@
+/* General layout */
+.dashboard-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f7fb;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Header */
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  color: #4caf50;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-header p {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+/* Exam list */
+.exam-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Exam Card */
+.exam-card {
+  background: linear-gradient(145deg, #f6f8fb, #e2e4f2);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 25px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.exam-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(145deg, #e2e4f2, #f6f8fb);
+}
+
+.exam-card.selected {
+  border: 2px solid #4caf50;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.exam-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.exam-title:hover {
+  color: #4caf50;
+}
+
+/* Exam Details */
+.exam-details {
+  font-size: 0.95rem;
+  color: #777;
+  margin-top: 15px;
+  text-align: left;
+  padding: 10px 0;
+  line-height: 1.6;
+}
+
+/* Separate each piece of information */
+.exam-info {
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.exam-info span {
+  font-weight: 500;
+  color: #555;
+}
+
+/* Date and time */
+.exam-date {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.exam-subject,
+.exam-marks,
+.exam-creator {
+  font-size: 1rem;
+  color: #555;
+}
+
+.exam-creator {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* Bold last date to apply */
+.exam-last-date {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e74c3c;
+  margin-top: 10px;
+}
+
+/* Exam Instructions */
+.exam-instructions {
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 400;
+  margin-top: 10px;
+  text-align: left;
+  line-height: 1.0;
+  padding: 10px 0;
+}
+
+.exam-instructions ul {
+  padding-left: 20px;
+}
+
+.exam-instructions li {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Button */
+.register-button {
+  display: block;
+  margin: 20px auto;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #45a049;
+  transform: translateY(-5px);
+}
+
+.register-button.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Message box */
+.message-container {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.message-container .success {
+  color: #4caf50;
+}
+
+.message-container .error {
+  color: #ff5722;
+}
+
+/* No exams message */
+.no-exams-message {
+  font-size: 1.1rem;
+  color: #777;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* Registered Exams Section */
+.registered-exams {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.registered-exams h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.registered-exam-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.registered-exam-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.registered-exam-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.registered-exam-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.registered-exam-date {
+  font-size: 1rem;
+  color: #777;
+}
+
+.registered-exam-subjects,
+.registered-exam-totalMarks,
+.registered-exam-instructions{
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+}
